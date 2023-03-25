@@ -20,7 +20,7 @@ const liElArr = ingredients.map(ingredient => {
 
 listEl.append(...liElArr);
 
-// console.log(...liElArr);
+
 
 
 

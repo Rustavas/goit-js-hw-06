@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.container {
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 20px;
+  padding-left: 20px;
+  /* background-color: blue; */
+
+  @media screen and (min-width: 375px) {
+    max-width: 375px;
+  }
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+  }
+  @media screen and (min-width: 1440px) {
+    max-width: 1440px;
+  }
+}
+.link {
+  text-align: left;
+}
+
+.title {
+  font-family: DM Sans;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.19;
+  letter-spasing: -4%;
+  color: rgba(17, 17, 17, 1);
+}
+.title-books {
+  color: rgba(79, 46, 232, 1);
+}
+
+.card-list {
+  width: 100%;
+}
+.card_item {
+  overflow: hidden;
+  /* width: 335px; */
+  /* height: 571px; */
+  @media screen and (min-width: 375px) {
+    width: 335px;
+    height: 571px;
+  }
+  /* @media screen and (min-width: 768px){
+
+    max-width: 704px;
+    max-height: 474px;
+  } */
+  /* @media screen and (min-width: 1440px){
+    max-width: 996px;
+    max-height: 425px;
+  } */
+}
+.card_title-section {
+  font-family: DM Sans;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.29;
+  /* letter-spasing: 3%; */
+  letter-spasing: 0.03em;
+  text-transform: uppercase;
+
+  color: rgba(180, 175, 175, 1);
+}
+.card{
+  margin-bottom: 10px;
+}
+.card_photo {
+  width: 100%;
+  height: 485px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px;
+}
+.card_book-title {
+  font-family: DM Sans;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.13;
+  letter-spasing: -0.04em;
+  /* letter-spasing: -0.04em; */
+  text-transform: uppercase;
+}
+.card_author-title {
+  font-family: DM Sans;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.29;
+  /* letter-spasing: 3%; */
+  letter-spasing: 0.03em;
+  color: rgba(180, 175, 175, 1);
+}
+.card_link {
+  margin-top: 10px;
+  margin-left: auto;
+  width: 129px;
+  height: 46px;
+}
+.card_link-more {
+  display: inline-block;
+  padding: 14px 28px;
+  font-family: DM Sans;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.29;
+  /* letter-spasing: -1%; */
+  text-transform: uppercase;
+  color: rgba(17, 17, 17, 1);
+  border: 2px solid;
+  border-radius: 40px;
+  border-color: rgba(79, 46, 232, 1);
+}

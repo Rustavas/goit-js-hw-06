@@ -1,14 +1,12 @@
-import { headingAll, headingOne, headingTwo, headingFour, headingFive, headingSix, headingSeven, headingAight } from './variables_project.js'
+import { headingAll, headingOne, headingTwo, headingFour, headingFive, headingSix, headingSeven, headingEight } from './variables_project.js'
 
-headingAll.addEventListener('click', onClick);
+headingOne.addEventListener('click', onClick);
 
 function onClick(evt) {
-  onLoadAll()
+  console.log(evt.target.textContent)
 }
-async function getAll() {
-  // return await fetch('https://books-backend.p.goit.global/books/top-books')
-    // return await fetch('https://books-backend.p.goit.global/books/category-list')
-    return await fetch('https://books-backend.p.goit.global/books/category?category=Paperback Nonfiction')
+async function getTopBooks() {
+  return await fetch('https://books-backend.p.goit.global/books/top-books')
     .then(resp => {
       if (!resp.ok) {
         throw new Error(resp.statusText)
@@ -17,29 +15,34 @@ async function getAll() {
     });
 
 }
-function onLoadAll(){
-  getAll().then(data => console.log(data))
+
+function getRandomTopBooks() {
+  getTopBooks().then(data => {
+    const arrTopBooks = [];
+    let i = 0;
+    for (const el of data) {
+      if (arrTopBooks.length === 4) {
+        break;
+      }
+      i = Math.round(Math.random() * data.length);
+      if (!arrTopBooks.includes(data[i])) {
+        arrTopBooks.push(data[i])
+      }
+    }
+    
+    const objTopBooks = {
+      ...arrTopBooks
+    }
+    console.dir(arrTopBooks)
+   
+
+
+
+
+
+    
+  })
+    .catch(err => console.log(err))
 }
-// function onLoadAll() {
-
-//   getAll().then(data => {
-//     const arr = [];
-//     let i = 0;
-//     for (const el of data) {
-//       if (arr.length === 4) {
-//         break;
-//       }
-//       i = Math.floor(Math.random() * data.length);
-//       if (!arr.includes(i)) {
-//         arr.push(i)
-
-//       }
-//       console.log(arr)
-
-//     }
-
-
-
-//   })
-// }
-onLoadAll();
+getRandomTopBooks()
+// (list_name, )

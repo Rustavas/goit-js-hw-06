@@ -29,18 +29,15 @@ function getRandomTopBooks() {
         arrTopBooks.push(data[i])
       }
     }
-    
-    const objTopBooks = {
-      ...arrTopBooks
-    }
     console.dir(arrTopBooks)
+
    
 
 
 
 
 
-    
+
   })
     .catch(err => console.log(err))
 }
